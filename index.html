@@ -1,73 +1,453 @@
 <!doctype html>
 <html lang="it">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Pescheria da Kevin Di Biase</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#06345f,#0a7898,#dff5f7);
+  font-family:Arial,Helvetica,sans-serif;
+  color:#12324a;
+}
+
+.wrap{
+  max-width:760px;
+  margin:auto;
+  background:#f8fbfa;
+  min-height:100vh;
+  overflow:hidden;
+}
+
+/* IMMAGINE IN ALTO */
+
+.hero{
+  padding:14px 14px 6px;
+}
+
+.hero img{
+  display:block;
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 8px 25px rgba(0,45,80,.28);
+}
+
+/* CONTENUTO */
+
+.content{
+  padding:10px 16px 35px;
+}
+
+h1{
+  color:#064b78;
+  text-align:center;
+  font-size:30px;
+  margin:12px 0 5px;
+}
+
+.tag{
+  text-align:center;
+  color:#087d9c;
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:22px;
+}
+
+/* DECORAZIONE MARINA */
+
+.wave-title{
+  text-align:center;
+  color:#0791a9;
+  font-size:22px;
+  margin:4px 0 10px;
+}
+
+/* CARD */
+
+.card{
+  background:white;
+  border-radius:22px;
+  margin:18px 0;
+  padding:21px;
+  box-shadow:0 7px 22px rgba(0,65,95,.12);
+  border:2px solid #d9f0f3;
+}
+
+.card h2{
+  margin:0 0 16px;
+  color:#07537f;
+  font-size:23px;
+}
+
+/* SPECIALITÀ */
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:13px;
+}
+
+.item{
+  background:linear-gradient(145deg,#eaf9fb,#d9f2f6);
+  border-radius:17px;
+  padding:15px;
+  font-weight:800;
+  color:#075277;
+  border:1px solid #c5e9ee;
+  box-shadow:0 3px 8px rgba(0,90,120,.08);
+}
+
+.item small{
+  display:block;
+  margin-top:7px;
+  font-weight:400;
+  line-height:1.4;
+  color:#42687a;
+}
+
+/* SERVIZI */
+
+.services .item{
+  background:linear-gradient(145deg,#f2fbfc,#e4f5f7);
+}
+
+/* MENU */
+
+.notice{
+  background:#e5f7fa;
+  border-left:5px solid #0791a9;
+  padding:15px;
+  border-radius:12px;
+  line-height:1.5;
+  color:#31596c;
+}
+
+/* PULSANTE ROTONDO RICETTE */
+
 .recipe-button{
+  width:190px;
+  height:190px;
+  margin:30px auto;
+  border-radius:50%;
+
+  background:
+    radial-gradient(circle at 35% 25%,#19b6c5,#087fa5 45%,#063b69 100%);
+
+  color:white;
+  text-decoration:none;
+
+  border:7px solid white;
+
+  box-shadow:
+    0 8px 25px rgba(0,45,75,.30),
+    inset 0 2px 8px rgba(255,255,255,.25);
+
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  width:190px;
-  height:190px;
-  margin:25px auto;
-  border-radius:50%;
-  background:linear-gradient(145deg,#087fa5,#063b69);
-  color:white;
-  text-decoration:none;
-  border:7px solid white;
-  box-shadow:0 8px 25px rgba(0,0,0,.25);
+
   text-align:center;
+
+  transition:.2s;
 }
 
-.recipe-button span{
-  font-size:18px;
+.recipe-button:active{
+  transform:scale(.95);
+}
+
+.recipe-button .discover{
+  font-size:15px;
   letter-spacing:2px;
 }
 
-.recipe-button strong{
+.recipe-button .title{
   font-size:22px;
-  line-height:1.2;
+  line-height:1.15;
+  font-weight:800;
   margin:7px 0;
 }
 
-.recipe-button small{
+.recipe-button .fish{
+  font-size:24px;
+}
+
+/* MERCATI */
+
+.market-title{
+  text-align:center;
+  color:#07537f;
   font-size:22px;
-}<style>
-*{box-sizing:border-box}body{margin:0;background:#061d3d;font-family:Arial,Helvetica,sans-serif;color:#102746}.wrap{max-width:760px;margin:auto;background:#f8f4ea;min-height:100vh}.hero{padding:14px}.hero img{display:block;width:100%;border-radius:18px;box-shadow:0 8px 30px #0004}.content{padding:8px 16px 32px}.card{background:#fff;border-radius:20px;margin:16px 0;padding:22px;box-shadow:0 6px 22px #09274a18;border:1px solid #e8e1d4}h1,h2{margin:0;color:#07366d}h1{font-size:30px;text-align:center;margin:10px 0}h2{font-size:23px;margin-bottom:14px}.tag{text-align:center;font-size:16px;color:#31556d;margin-bottom:18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.item{background:#eef5fa;border-radius:14px;padding:14px;font-weight:700}.item small{display:block;font-weight:400;margin-top:5px}.notice{background:#e8f4fb;border-left:5px solid #0a6cae;padding:14px;border-radius:10px;line-height:1.5}.market{padding:11px 0;border-bottom:1px solid #ddd}.market:last-child{border-bottom:0}.day{font-weight:800;color:#07518d}.contact{background:#07366d;color:#fff;text-align:center}.contact h2{color:#fff}.phone{font-size:27px;font-weight:800;letter-spacing:1px}.footer{text-align:center;color:#b7c8d8;font-size:13px;padding:22px}.hero-note{text-align:center;color:#fff;font-size:13px;padding-bottom:10px}@media(max-width:520px){.grid{grid-template-columns:1fr}.phone{font-size:23px}}
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.market{
+  padding:13px 4px;
+  border-bottom:1px solid #dce8eb;
+  line-height:1.45;
+}
+
+.market:last-child{
+  border-bottom:0;
+}
+
+.day{
+  font-weight:800;
+  color:#07829e;
+}
+
+/* CONTATTI */
+
+.contact{
+  background:linear-gradient(145deg,#07537f,#06345f);
+  color:white;
+  text-align:center;
+  border:0;
+}
+
+.contact h2{
+  color:white;
+}
+
+.phone{
+  font-size:27px;
+  font-weight:800;
+  letter-spacing:1px;
+  margin:12px 0;
+}
+
+.contact p{
+  margin-bottom:0;
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+  color:white;
+  background:#06345f;
+  font-size:13px;
+  padding:24px 15px;
+}
+
+/* TELEFONO */
+
+@media(max-width:520px){
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  h1{
+    font-size:27px;
+  }
+
+  .recipe-button{
+    width:175px;
+    height:175px;
+  }
+
+  .recipe-button .title{
+    font-size:21px;
+  }
+
+  .phone{
+    font-size:23px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <div class="wrap">
-<div class="hero"><img src="volantino.png" alt="Pescheria da Kevin Di Biase - servizi e specialità"></div>
-<div class="content">
-<h1>🐟 Pescheria da Kevin Di Biase</h1>
-<div class="tag">Il meglio del mare, ogni giorno per te!</div>
-<section class="card"><h2>✨ Le nostre specialità</h2><div class="grid">
-<div class="item">Vaschette di tartare mista<small>Salmone · Tonno · Ricciola · Spada · Branzino · Orata · Dentice</small></div>
-<div class="item">Spiedini di gamberi<small>Pronti da cuocere, gusto assicurato!</small></div>
-<div class="item">Spezzatino misto<small>Ideale per sughi e zuppe di mare.</small></div>
-<div class="item">Alici spinate<small>Pronte da gustare, senza spine.</small></div>
-</div></section>
-<section class="card"><h2>🔪 I nostri servizi</h2><div class="grid">
-<div class="item">Pulizia del pesce gratuita</div><div class="item">Filettatura e taglio su richiesta</div><div class="item">Preparazioni personalizzate</div><div class="item">Consigli per preparazione e cottura</div>
-</div></section>
-<section class="card"><h2>🐠 Menù indicativo</h2><p>Pesce fresco di giornata, pesce azzurro, crostacei, molluschi e cefalopodi, oltre alle specialità e al pescato del giorno.</p><div class="notice">Disponibilità e prezzi possono variare di giorno in giorno in base al pescato e alla disponibilità del mercato.</div></section>
-<a href="ricette.html" style="display:flex;flex-direction:column;align-items:center;justify-content:center;width:180px;height:180px;margin:25px auto;border-radius:50%;background:linear-gradient(145deg,#087fa5,#063b69);color:white;text-decoration:none;border:6px solid white;box-shadow:0 8px 20px rgba(0,0,0,.25);text-align:center;">
-  <span style="font-size:16px;letter-spacing:2px;">SCOPRI</span>
-  <strong style="font-size:21px;line-height:1.2;margin:6px 0;">LE NOSTRE<br>RICETTE</strong>
-  <small style="font-size:20px;">🐟</small>
-</a>
-  <span>SCOPRI</span>
-  <strong>LE NOSTRE<br>RICETTE</strong>
-  <small>🐟</small>
-</a>
-<div class="market"><span class="day">MERCOLEDÌ · VIGNATE</span><br>Via Vittorio Veneto 63</div>
-<div class="market"><span class="day">GIOVEDÌ · SESTO SAN GIOVANNI</span><br>Via De Zorzi</div>
-<div class="market"><span class="day">VENERDÌ · GARBAGNATE MILANESE</span><br>Piazza del Mercato</div>
-<div class="market"><span class="day">SABATO · CORMANO</span><br>Piazza Enrico Berlinguer</div>
-</section>
-<section class="card contact"><h2>📞 Per informazioni e prenotazioni</h2><div class="phone">375 6406804</div><p>Chiamaci per verificare disponibilità e prezzo del giorno.</p></section>
-</div><div class="footer">Pesce fresco · qualità · passione</div>
+
+<!-- IMMAGINE GIÀ PRESENTE -->
+<div class="hero">
+  <img src="volantino.png"
+       alt="Pescheria da Kevin Di Biase - servizi e specialità">
 </div>
-</body></html>
+
+<div class="content">
+
+<h1>🐟 Pescheria da Kevin Di Biase</h1>
+
+<div class="tag">
+  Il meglio del mare, ogni giorno per te! 🌊
+</div>
+
+
+<!-- SPECIALITÀ -->
+
+<section class="card">
+
+<h2>🐠✨ Le nostre specialità</h2>
+
+<div class="grid">
+
+<div class="item">
+  🐟 Vaschette di tartare mista
+  <small>
+    Salmone · Tonno · Ricciola · Spada · Branzino · Orata · Dentice
+  </small>
+</div>
+
+<div class="item">
+  🍤 Spiedini di gamberi
+  <small>
+    Pronti da cuocere, gusto assicurato!
+  </small>
+</div>
+
+<div class="item">
+  🦐 Spezzatino misto
+  <small>
+    Ideale per sughi e zuppe di mare.
+  </small>
+</div>
+
+<div class="item">
+  🐟 Alici spinate
+  <small>
+    Pronte da gustare, senza spine.
+  </small>
+</div>
+
+</div>
+</section>
+
+
+<!-- SERVIZI -->
+
+<section class="card services">
+
+<h2>🔪🌊 I nostri servizi</h2>
+
+<div class="grid">
+
+<div class="item">
+  🧼 Pulizia del pesce gratuita
+</div>
+
+<div class="item">
+  🔪 Filettatura e taglio su richiesta
+</div>
+
+<div class="item">
+  ✨ Preparazioni personalizzate
+</div>
+
+<div class="item">
+  👨‍🍳 Consigli per preparazione e cottura
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section class="card">
+
+<h2>🐠 Menù indicativo</h2>
+
+<p>
+  Pesce fresco di giornata, pesce azzurro, crostacei,
+  molluschi e cefalopodi, oltre alle specialità
+  e al pescato del giorno.
+</p>
+
+<div class="notice">
+  🌊 Disponibilità e prezzi possono variare di giorno
+  in giorno in base al pescato e alla disponibilità
+  del mercato.
+</div>
+
+</section>
+
+
+<!-- RICETTE -->
+
+<a href="ricette.html" class="recipe-button">
+
+<span class="discover">
+  SCOPRI
+</span>
+
+<span class="title">
+  LE NOSTRE<br>RICETTE
+</span>
+
+<span class="fish">
+  🐟
+</span>
+
+</a>
+
+
+<!-- MERCATI -->
+
+<section class="card">
+
+<div class="market-title">
+  📍 Dove trovarci
+</div>
+
+<div class="market">
+  <span class="day">🌊 MERCOLEDÌ · VIGNATE</span><br>
+  Via Vittorio Veneto 63
+</div>
+
+<div class="market">
+  <span class="day">🌊 GIOVEDÌ · SESTO SAN GIOVANNI</span><br>
+  Via De Zorzi
+</div>
+
+<div class="market">
+  <span class="day">🌊 VENERDÌ · GARBAGNATE MILANESE</span><br>
+  Piazza del Mercato
+</div>
+
+<div class="market">
+  <span class="day">🌊 SABATO · CORMANO</span><br>
+  Piazza Enrico Berlinguer
+</div>
+
+</section>
+
+
+<!-- CONTATTI -->
+
+<section class="card contact">
+
+<h2>📞 Per informazioni e prenotazioni</h2>
+
+<div class="phone">
+  375 6406804
+</div>
+
+<p>
+  Chiamaci per verificare disponibilità e prezzo del giorno.
+</p>
+
+</section>
+
+</div>
+
+<div class="footer">
+  🐟 Pesce fresco · qualità · passione 🌊
+</div>
+
+</div>
+
+</body>
+</html>
