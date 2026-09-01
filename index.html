@@ -4,21 +4,35 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pescheria da Kevin Di Biase</title>
 .recipe-button{
-  text-align:center;
-  margin:25px 0;
-}
-
-.recipe-button a{
-  display:block;
-  background:linear-gradient(135deg,#087fa5,#063b69);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:190px;
+  height:190px;
+  margin:25px auto;
+  border-radius:50%;
+  background:linear-gradient(145deg,#087fa5,#063b69);
   color:white;
   text-decoration:none;
+  border:7px solid white;
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
+  text-align:center;
+}
+
+.recipe-button span{
+  font-size:18px;
+  letter-spacing:2px;
+}
+
+.recipe-button strong{
   font-size:22px;
-  font-weight:800;
-  padding:18px 14px;
-  border-radius:18px;
-  box-shadow:0 7px 18px rgba(0,0,0,.20);
-  letter-spacing:.3px;
+  line-height:1.2;
+  margin:7px 0;
+}
+
+.recipe-button small{
+  font-size:22px;
 }<style>
 *{box-sizing:border-box}body{margin:0;background:#061d3d;font-family:Arial,Helvetica,sans-serif;color:#102746}.wrap{max-width:760px;margin:auto;background:#f8f4ea;min-height:100vh}.hero{padding:14px}.hero img{display:block;width:100%;border-radius:18px;box-shadow:0 8px 30px #0004}.content{padding:8px 16px 32px}.card{background:#fff;border-radius:20px;margin:16px 0;padding:22px;box-shadow:0 6px 22px #09274a18;border:1px solid #e8e1d4}h1,h2{margin:0;color:#07366d}h1{font-size:30px;text-align:center;margin:10px 0}h2{font-size:23px;margin-bottom:14px}.tag{text-align:center;font-size:16px;color:#31556d;margin-bottom:18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.item{background:#eef5fa;border-radius:14px;padding:14px;font-weight:700}.item small{display:block;font-weight:400;margin-top:5px}.notice{background:#e8f4fb;border-left:5px solid #0a6cae;padding:14px;border-radius:10px;line-height:1.5}.market{padding:11px 0;border-bottom:1px solid #ddd}.market:last-child{border-bottom:0}.day{font-weight:800;color:#07518d}.contact{background:#07366d;color:#fff;text-align:center}.contact h2{color:#fff}.phone{font-size:27px;font-weight:800;letter-spacing:1px}.footer{text-align:center;color:#b7c8d8;font-size:13px;padding:22px}.hero-note{text-align:center;color:#fff;font-size:13px;padding-bottom:10px}@media(max-width:520px){.grid{grid-template-columns:1fr}.phone{font-size:23px}}
 </style>
@@ -39,7 +53,11 @@
 <div class="item">Pulizia del pesce gratuita</div><div class="item">Filettatura e taglio su richiesta</div><div class="item">Preparazioni personalizzate</div><div class="item">Consigli per preparazione e cottura</div>
 </div></section>
 <section class="card"><h2>🐠 Menù indicativo</h2><p>Pesce fresco di giornata, pesce azzurro, crostacei, molluschi e cefalopodi, oltre alle specialità e al pescato del giorno.</p><div class="notice">Disponibilità e prezzi possono variare di giorno in giorno in base al pescato e alla disponibilità del mercato.</div></section>
-<div class="recipe-button"><a href="ricette.html">🐟✨ SCOPRI LE NOSTRE RICETTE ✨🐟</a></div>
+<a href="ricette.html" class="recipe-button">
+  <span>SCOPRI</span>
+  <strong>LE NOSTRE<br>RICETTE</strong>
+  <small>🐟</small>
+</a>
 <div class="market"><span class="day">MERCOLEDÌ · VIGNATE</span><br>Via Vittorio Veneto 63</div>
 <div class="market"><span class="day">GIOVEDÌ · SESTO SAN GIOVANNI</span><br>Via De Zorzi</div>
 <div class="market"><span class="day">VENERDÌ · GARBAGNATE MILANESE</span><br>Piazza del Mercato</div>
