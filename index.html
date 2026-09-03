@@ -21,6 +21,25 @@ h1{color:#064b78;text-align:center;font-size:30px;margin:12px 0 5px}
 .notice{background:#e5f7fa;border-left:5px solid #0791a9;padding:15px;border-radius:12px;line-height:1.5;color:#31596c}
 .recipe-button{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:100%;max-width:520px;margin:30px auto;padding:18px 20px;border-radius:22px;background:linear-gradient(145deg,#063b69,#087fa5,#19b6c5);color:white;text-decoration:none;border:5px solid white;box-shadow:0 8px 25px rgba(0,45,75,.30);transition:.2s}
 .recipe-button:active{transform:scale(.98)}
+.recipe-callout{
+  text-align:center;
+  margin:26px auto -12px;
+  color:#07537f;
+  font-size:17px;
+  font-weight:800;
+  letter-spacing:.3px;
+}
+.recipe-callout .arrow{
+  display:inline-block;
+  font-size:28px;
+  line-height:1;
+  margin:0 7px;
+  animation:bounce 1.2s infinite;
+}
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(6px)}
+}
 .recipe-button .discover{font-size:14px;letter-spacing:2px}.recipe-button .title{font-size:24px;line-height:1.15;font-weight:800;margin:5px 0}.recipe-button .fish{font-size:24px}
 .market-title{text-align:center;color:#07537f;font-size:22px;font-weight:800;margin-bottom:10px}
 .market{padding:13px 4px;border-bottom:1px solid #dce8eb;line-height:1.45}.market:last-child{border-bottom:0}.day{font-weight:800;color:#07829e}
@@ -83,6 +102,12 @@ Se il trattamento previsto non è già stato effettuato, non consumare il prodot
 <p>Pesce fresco di giornata, pesce azzurro, crostacei, molluschi e cefalopodi, oltre alle specialità e al pescato del giorno.</p>
 <div class="notice">🌊 Disponibilità e prezzi possono variare di giorno in giorno in base al pescato e alla disponibilità del mercato.</div>
 </section>
+
+<div class="recipe-callout">
+  <span class="arrow">↓</span>
+  <strong>PREMI QUI PER SCOPRIRE LE RICETTE</strong>
+  <span class="arrow">↓</span>
+</div>
 
 <a href="ricette.html" class="recipe-button">
 <span class="discover">SCOPRI</span>
