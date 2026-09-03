@@ -19,26 +19,45 @@ h1{color:#064b78;text-align:center;font-size:30px;margin:12px 0 5px}
 .item small{display:block;margin-top:7px;font-weight:400;line-height:1.4;color:#42687a}
 .services .item{background:linear-gradient(145deg,#f2fbfc,#e4f5f7)}
 .notice{background:#e5f7fa;border-left:5px solid #0791a9;padding:15px;border-radius:12px;line-height:1.5;color:#31596c}
-.recipe-button{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:100%;max-width:520px;margin:30px auto;padding:18px 20px;border-radius:22px;background:linear-gradient(145deg,#063b69,#087fa5,#19b6c5);color:white;text-decoration:none;border:5px solid white;box-shadow:0 8px 25px rgba(0,45,75,.30);transition:.2s}
-.recipe-button:active{transform:scale(.98)}
+.recipe-button{
+  width:190px;
+  height:190px;
+  margin:18px auto 30px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 25%,#19b6c5,#087fa5 45%,#063b69 100%);
+  color:white;
+  text-decoration:none;
+  border:7px solid white;
+  box-shadow:0 8px 25px rgba(0,45,75,.30),inset 0 2px 8px rgba(255,255,255,.25);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  transition:.2s;
+}
+.recipe-button:active{transform:scale(.95)}
+.recipe-button .discover{font-size:15px;letter-spacing:2px}
+.recipe-button .title{font-size:22px;line-height:1.15;font-weight:800;margin:7px 0}
+.recipe-button .fish{font-size:24px}
 .recipe-callout{
   text-align:center;
-  margin:26px auto -12px;
+  margin:28px auto 0;
   color:#07537f;
-  font-size:17px;
+  font-size:16px;
   font-weight:800;
-  letter-spacing:.3px;
+  letter-spacing:.2px;
 }
 .recipe-callout .arrow{
-  display:inline-block;
-  font-size:28px;
+  display:block;
+  font-size:30px;
   line-height:1;
-  margin:0 7px;
+  margin:3px auto;
   animation:bounce 1.2s infinite;
 }
 @keyframes bounce{
   0%,100%{transform:translateY(0)}
-  50%{transform:translateY(6px)}
+  50%{transform:translateY(7px)}
 }
 .recipe-button .discover{font-size:14px;letter-spacing:2px}.recipe-button .title{font-size:24px;line-height:1.15;font-weight:800;margin:5px 0}.recipe-button .fish{font-size:24px}
 .market-title{text-align:center;color:#07537f;font-size:22px;font-weight:800;margin-bottom:10px}
@@ -49,7 +68,7 @@ h1{color:#064b78;text-align:center;font-size:30px;margin:12px 0 5px}
 .ai-icon{font-size:42px;margin-bottom:5px}.ai-card h2{color:white;font-size:26px;margin:5px 0 12px;letter-spacing:.5px}.ai-card p{font-size:16px;line-height:1.45;margin:8px 0}.ai-card p strong{font-size:20px}
 .ai-button{display:block;margin:20px auto 0;padding:16px 18px;max-width:390px;border-radius:50px;background:white;color:#064b78;text-decoration:none;font-size:17px;font-weight:800;box-shadow:0 5px 15px rgba(0,0,0,.22)}
 .ai-button:active{transform:scale(.97)}
-@media(max-width:520px){.grid{grid-template-columns:1fr}h1{font-size:27px}.recipe-button .title{font-size:21px}.phone{font-size:23px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}h1{font-size:27px}.recipe-button{width:175px;height:175px}.recipe-button .title{font-size:21px}.phone{font-size:23px}}
 </style>
 </head>
 <body>
