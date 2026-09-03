@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pescheria da Kevin Di Biase</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#06345f,#0a7898,#dff5f7);font-family:Arial,Helvetica,sans-serif;color:#12324a}
+.wrap{max-width:760px;margin:auto;background:#f8fbfa;min-height:100vh;overflow:hidden}
+.hero{padding:14px 14px 6px}.hero img{display:block;width:100%;border-radius:22px;box-shadow:0 8px 25px rgba(0,45,80,.28)}
+.content{padding:10px 16px 35px}
+h1{color:#064b78;text-align:center;font-size:30px;margin:12px 0 5px}
+.tag{text-align:center;color:#087d9c;font-size:16px;font-weight:600;margin-bottom:22px}
+.card{background:white;border-radius:22px;margin:18px 0;padding:21px;box-shadow:0 7px 22px rgba(0,65,95,.12);border:2px solid #d9f0f3}
+.card h2{margin:0 0 16px;color:#07537f;font-size:23px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.item{background:linear-gradient(145deg,#eaf9fb,#d9f2f6);border-radius:17px;padding:15px;font-weight:800;color:#075277;border:1px solid #c5e9ee;box-shadow:0 3px 8px rgba(0,90,120,.08)}
+.item small{display:block;margin-top:7px;font-weight:400;line-height:1.4;color:#42687a}
+.services .item{background:linear-gradient(145deg,#f2fbfc,#e4f5f7)}
+.notice{background:#e5f7fa;border-left:5px solid #0791a9;padding:15px;border-radius:12px;line-height:1.5;color:#31596c}
+.recipe-button{
+  width:190px;
+  height:190px;
+  margin:18px auto 30px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 25%,#19b6c5,#087fa5 45%,#063b69 100%);
+  color:white;
+  text-decoration:none;
+  border:7px solid white;
+  box-shadow:0 8px 25px rgba(0,45,75,.30),inset 0 2px 8px rgba(255,255,255,.25);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  transition:.2s;
+}
+.recipe-button:active{transform:scale(.95)}
+.recipe-button .discover{font-size:15px;letter-spacing:2px}
+.recipe-button .title{font-size:22px;line-height:1.15;font-weight:800;margin:7px 0}
+.recipe-button .fish{font-size:24px}
+.recipe-callout{
+  text-align:center;
+  margin:28px auto 0;
+  color:#07537f;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+.recipe-callout .arrow{
+  display:block;
+  font-size:30px;
+  line-height:1;
+  margin:3px auto;
+  animation:bounce 1.2s infinite;
+}
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(7px)}
+}
+.recipe-button .discover{font-size:14px;letter-spacing:2px}.recipe-button .title{font-size:24px;line-height:1.15;font-weight:800;margin:5px 0}.recipe-button .fish{font-size:24px}
+.market-title{text-align:center;color:#07537f;font-size:22px;font-weight:800;margin-bottom:10px}
+.market{padding:13px 4px;border-bottom:1px solid #dce8eb;line-height:1.45}.market:last-child{border-bottom:0}.day{font-weight:800;color:#07829e}
+.contact{background:linear-gradient(145deg,#07537f,#06345f);color:white;text-align:center;border:0}.contact h2{color:white}.phone{font-size:27px;font-weight:800;letter-spacing:1px;margin:12px 0}.contact p{margin-bottom:0}
+.footer{text-align:center;color:white;background:#06345f;font-size:13px;padding:24px 15px}
+.ai-card{margin:22px 0 25px;padding:28px 20px;text-align:center;border-radius:26px;background:linear-gradient(145deg,#063b69,#087fa5,#19b6c5);color:white;box-shadow:0 10px 28px rgba(0,55,90,.28);border:4px solid white}
+.ai-icon{font-size:42px;margin-bottom:5px}.ai-card h2{color:white;font-size:26px;margin:5px 0 12px;letter-spacing:.5px}.ai-card p{font-size:16px;line-height:1.45;margin:8px 0}.ai-card p strong{font-size:20px}
+.ai-button{display:block;margin:20px auto 0;padding:16px 18px;max-width:390px;border-radius:50px;background:white;color:#064b78;text-decoration:none;font-size:17px;font-weight:800;box-shadow:0 5px 15px rgba(0,0,0,.22)}
+.ai-button:active{transform:scale(.97)}
+@media(max-width:520px){.grid{grid-template-columns:1fr}h1{font-size:27px}.recipe-button{width:175px;height:175px}.recipe-button .title{font-size:21px}.phone{font-size:23px}}
+
+/* PULSANTE RICETTE - VERSIONE TONDA */
+.recipe-button{
+  width:190px !important;
+  height:190px !important;
+  max-width:none !important;
+  padding:0 !important;
+  margin:18px auto 30px !important;
+  border-radius:50% !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+@media(max-width:520px){
+  .recipe-button{
+    width:175px !important;
+    height:175px !important;
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hero"><img src="volantino.png" alt="Pescheria da Kevin Di Biase - servizi e specialità"></div>
+
+<div class="ai-card">
+<div class="ai-icon">🤖🐟</div>
+<h2>IL CONSIGLIERE DI KEVIN</h2>
+<p><strong>Hai dubbi sul pesce?<br>Chiedilo a Kevin!</strong></p>
+<p>Ti aiuta con quantità, ricette, cotture<br>e idee per la tua cena. 🍋🐟</p>
+<a href="https://llm-chat-app-template.idiamantidelmare17.workers.dev/" target="_blank" class="ai-button">💬 CLICCA QUI PER CHATTARE CON KEVIN</a>
+</div>
+
+<div class="content">
+<h1>🐟 Pescheria da Kevin Di Biase</h1>
+<div class="tag">Il meglio del mare, ogni giorno per te! 🌊</div>
+
+<section class="card">
+<h2>🐠✨ Le nostre specialità</h2>
+<div class="grid">
+<div class="item">🐟 Vaschette di tartare mista
+<div style="margin-top:10px;font-size:13px;font-weight:400;line-height:1.45;color:#31596c">⚠️ <strong>IMPORTANTE – TARTARE E PESCE DA CONSUMARE CRUDO</strong><br><br>
+Le nostre vaschette di tartare vengono preparate al momento con pesce selezionato.<br><br>
+🐟 Prima del consumo a crudo, verificare che sia stato effettuato il trattamento di congelamento/abbattimento previsto per la sicurezza alimentare.<br><br>
+Il trattamento di congelamento previsto per i parassiti deve portare tutte le parti del prodotto ad almeno:<br><br>
+<strong>❄️ −20 °C per almeno 24 ore</strong><br>oppure<br><strong>❄️ −35 °C per almeno 15 ore</strong><br><br>
+Se il trattamento previsto non è già stato effettuato, non consumare il prodotto crudo prima di aver verificato che sia possibile effettuare un trattamento idoneo.<br><br>
+❗ Per qualsiasi dubbio, chiedi a Kevin prima dell'acquisto e del consumo.</div>
+<small>Salmone · Tonno · Ricciola · Spada · Branzino · Orata · Dentice</small>
+</div>
+<div class="item">🍤 Spiedini di gamberi<small>Pronti da cuocere, gusto assicurato!</small></div>
+<div class="item">🦐 Spezzatino misto<small>Ideale per sughi e zuppe di mare.</small></div>
+<div class="item">🐟 Alici spinate<small>Pronte da gustare, senza spine.</small></div>
+</div>
+</section>
+
+<section class="card services">
+<h2>🔪🌊 I nostri servizi</h2>
+<div class="grid">
+<div class="item">🧼 Pulizia del pesce gratuita</div>
+<div class="item">🔪 Filettatura e taglio su richiesta</div>
+<div class="item">✨ Preparazioni personalizzate</div>
+<div class="item">👨‍🍳 Consigli per preparazione e cottura</div>
+</div>
+</section>
+
+<section class="card">
+<h2>🐠 Menù indicativo</h2>
+<p>Pesce fresco di giornata, pesce azzurro, crostacei, molluschi e cefalopodi, oltre alle specialità e al pescato del giorno.</p>
+<div class="notice">🌊 Disponibilità e prezzi possono variare di giorno in giorno in base al pescato e alla disponibilità del mercato.</div>
+</section>
+
+<div class="recipe-callout">
+  <span class="arrow">↓</span>
+  <strong>PREMI QUI PER SCOPRIRE LE RICETTE</strong>
+  <span class="arrow">↓</span>
+</div>
+
+<a href="ricette.html" class="recipe-button">
+<span class="discover">SCOPRI</span>
+<span class="title">LE NOSTRE RICETTE</span>
+<span class="fish">🐟</span>
+</a>
+
+<section class="card">
+<div class="market-title">📍 Dove trovarci</div>
+<div class="market"><span class="day">🌊 MERCOLEDÌ · VIGNATE</span><br>Via Vittorio Veneto 63</div>
+<div class="market"><span class="day">🌊 GIOVEDÌ · SESTO SAN GIOVANNI</span><br>Via De Zorzi</div>
+<div class="market"><span class="day">🌊 VENERDÌ · GARBAGNATE MILANESE</span><br>Piazza del Mercato</div>
+<div class="market"><span class="day">🌊 SABATO · CORMANO</span><br>Piazza Enrico Berlinguer</div>
+</section>
+
+<section class="card contact">
+<h2>📞 Per informazioni e prenotazioni</h2>
+<div class="phone">375 6406804</div>
+<p>Chiamaci per verificare disponibilità e prezzo del giorno.</p>
+</section>
+</div>
+<div class="footer">🐟 Pesce fresco · qualità · passione 🌊</div>
+</div>
+</body>
+</html>
