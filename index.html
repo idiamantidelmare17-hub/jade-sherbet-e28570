@@ -69,6 +69,64 @@ h1{color:#064b78;text-align:center;font-size:30px;margin:12px 0 5px}
 .ai-button{display:block;margin:20px auto 0;padding:16px 18px;max-width:390px;border-radius:50px;background:white;color:#064b78;text-decoration:none;font-size:17px;font-weight:800;box-shadow:0 5px 15px rgba(0,0,0,.22)}
 .ai-button:active{transform:scale(.97)}
 @media(max-width:520px){.grid{grid-template-columns:1fr}h1{font-size:27px}.recipe-button{width:175px;height:175px}.recipe-button .title{font-size:21px}.phone{font-size:23px}}
+
+/* PULSANTE RICETTE - VERSIONE TONDA */
+.recipe-button{
+  width:190px !important;
+  height:190px !important;
+  max-width:none !important;
+  padding:0 !important;
+  margin:18px auto 30px !important;
+  border-radius:50% !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+/* FRECCE ELEGANTI */
+.recipe-callout .arrow{
+  display:block;
+  position:relative;
+  width:28px;
+  height:32px;
+  margin:4px auto;
+  font-size:0;
+  animation:arrowFloat 1.6s ease-in-out infinite;
+}
+.recipe-callout .arrow::before{
+  content:"";
+  position:absolute;
+  left:13px;
+  top:1px;
+  width:2px;
+  height:20px;
+  border-radius:2px;
+  background:#07537f;
+}
+.recipe-callout .arrow::after{
+  content:"";
+  position:absolute;
+  left:8px;
+  top:15px;
+  width:10px;
+  height:10px;
+  border-right:2px solid #07537f;
+  border-bottom:2px solid #07537f;
+  transform:rotate(45deg);
+  border-radius:0 0 2px 0;
+}
+@keyframes arrowFloat{
+  0%,100%{transform:translateY(0);opacity:.75}
+  50%{transform:translateY(5px);opacity:1}
+}
+@media(max-width:520px){
+  .recipe-button{
+    width:175px !important;
+    height:175px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -128,7 +186,7 @@ Se il trattamento previsto non è già stato effettuato, non consumare il prodot
   <span class="arrow">↓</span>
 </div>
 
-<a href="ricette.html" class="recipe-button">
+<a href="menu-ricette.html" class="recipe-button">
 <span class="discover">SCOPRI</span>
 <span class="title">LE NOSTRE RICETTE</span>
 <span class="fish">🐟</span>
